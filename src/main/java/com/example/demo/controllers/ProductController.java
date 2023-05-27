@@ -37,8 +37,8 @@ public class ProductController {
     }
 
     @PostMapping
-    public Product createProduct(@RequestBody Product product) {
-        return productService.createProduct(product);
+    public Product createProduct(@RequestBody Product product , @PathVariable Long id) {
+        return productService.createProduct(product, id);
     }
 
     @PutMapping("/{id}")
