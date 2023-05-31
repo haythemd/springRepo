@@ -23,6 +23,10 @@ public class ProductService {
 	public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
+	
+	public List<Product> getProdsByCatName(String cat_name){
+		return this.categoryRepo.findByName(cat_name).getProducts();
+	}
 
     
     public Product getProductById(long id) {
